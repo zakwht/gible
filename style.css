@@ -1,0 +1,63 @@
+html {
+  background-color: #ff8;
+  overflow: hidden;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  transform: scaleX(-1);
+}
+
+div.block {
+  font-size: 2em;
+  position: absolute;
+  top: 0;
+  height: 320px;
+  width: 320px;
+  text-align: center;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.speech {
+  position: absolute;
+  top: 0;
+  left: 420px;
+  transform: scale(0);
+  animation: fade 1s forwards;
+  animation-delay: 3s;
+  -webkit-animation: fade 1s forwards;
+  -webkit-animation-delay: 3s;
+}
+
+img.dog {
+  position: absolute;
+  bottom: -100%;
+  animation: slide 2s forwards;
+  animation-delay: 1s;
+  -webkit-animation: slide 2s forwards;
+  -webkit-animation-delay: 1s;
+}
+
+@keyframes slide {
+  100% { bottom: 0; }
+}
+
+@keyframes fade {
+  100% { transform: none; }
+}
+
+@-webkit-keyframes slide {
+  100% { bottom: 0; }
+}
+
+@-webkit-keyframes fade {
+  100% { transform: none; }
+}
